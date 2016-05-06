@@ -1,0 +1,314 @@
+<html>
+<head>
+    <title></title>
+    <script src="scripts/jquery-2.1.4.js"></script>
+    <script src="scripts/unslider.min.js"></script>
+    <script src="scripts/script.js"></script>
+</head>
+<body>
+    <!--<div id="left" style="width:80%;">-->
+    <div class="cover"></div>
+
+    <div class="popup" id="loginPopUp">
+        <a class="close" href="#" onclick="closePopup('loginPopUp')">X</a>
+        <ul class="tab-group">
+            <li class="tab active" style="float: left"><a href="#signup">Sign Up</a></li>
+            <li class="tab" style="float: left"><a href="#login">Log In</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="signup">
+                <div class="field-wrap">
+                    <label>
+                        Username<span class="req">*</span>
+                    </label>
+                    <input type="email" id="txtUser" required autocomplete="off" />
+                    <label id="lblErrorUser" class="errorLabel"></label>
+                </div>
+
+                <div class="top-row">
+                    <div class="field-wrap">
+                        <label>
+                            First Name<span class="req">*</span>
+                        </label>
+                        <input type="text" id="txtName" required autocomplete="off" />
+                        <label id="lblErrorName" class="errorLabel"></label>
+                    </div>
+
+                    <div class="field-wrap">
+                        <label>
+                            Last Name<span class="req">*</span>
+                        </label>
+                        <input type="text" id="txtLastName" required autocomplete="off" />
+                        <label id="lblErrorLast" class="errorLabel"></label>
+                    </div>
+                </div>
+
+                <div class="field-wrap">
+                    <label>
+                        Set A Password<span class="req">*</span>
+                    </label>
+                    <input type="password" id="txtPass" required autocomplete="off" />
+                    <label id="lblErrorPass" class="errorLabel"></label>
+                </div>
+
+                <div class="field-wrap">
+                    <label>
+                        Confirm Password<span class="req">*</span>
+                    </label>
+                    <input type="password" id="txtPass2" required autocomplete="off" />
+                    <label id="lblErrorPass2" class="errorLabel">
+                    </label>
+                </div>
+
+                <div class="field-wrap">
+                    <input type="checkbox" id="chkAdmin" style="width: 19px; height: 19px; float: left" />
+                    <label for="chkAdmin" style="margin-top: -5px; margin-left: 15px; margin-bottom: 10px">
+                        Is Administrator
+                    </label>
+                </div>
+
+                <button type="submit" class="button button-block" id="btnRegister">
+                    Get Started</button>
+            </div>
+
+            <div id="login">
+                <h1>Welcome Back!</h1>
+                <div class="field-wrap">
+                    <label>
+                        Username<span class="req">*</span>
+                    </label>
+                    <input type="email" required autocomplete="off" id="txtLogUser" />
+                    <label id="lblLogUser" class="errorLabel">
+                    </label>
+                </div>
+
+                <div class="field-wrap">
+                    <label>
+                        Password<span class="req">*</span>
+                    </label>
+                    <input type="password" required autocomplete="off" id="txtLogPass" />
+                    <label id="lblLogPass" class="errorLabel" />
+                </div>
+
+                <button class="button button-block" id="btnLogin">
+                    Log In</button>
+
+            </div>
+
+        </div>
+        <!-- tab-content -->
+        <div style="position: relative">
+            <label id="lblError" class="errorLabel">
+            </label>
+        </div>
+    </div>
+
+    <div class="popup" id="logoutPopUp">
+        <a class="close" href="#" onclick="closePopup('logoutPopUp')">X</a>
+        <div id="Div4">
+            <h1>Logout from the site?</h1>
+            <button class="button button-block" id="Button3" onclick="logout()">
+                Yes</button>
+            <button class="button button-block" id="Button2" onclick="closePopup('logoutPopUp')">
+                No</button>
+        </div>
+    </div>
+
+    <div class="popup" id="detailsPopUp">
+        <a class="close" href="#" onclick="closePopup('detailsPopUp')">X</a>
+        <div id="Div2" style="width: 100%; height: 350px;">
+            <img id="details_img" src="#" style="width: 180px; height: 250px;" />
+            <div class="field-wrap" style="width: 100%">
+                <div class="divTitle">
+                    <label id="Label2">Character: </label>
+                </div>
+                <div class="divText">
+                    <label id="lblCharacter"></label>
+                </div>
+            </div>
+            <div class="field-wrap">
+                <div class="divTitle">
+                    <label id="Label1">Title: </label>
+                </div>
+                <div class="divText">
+                    <label id="lblTitle"></label>
+                </div>
+            </div>
+            <div class="field-wrap">
+                <div class="divTitle">
+                    <label id="Label3">Number: </label>
+                </div>
+                <div class="divText">
+                    <label id="lblNumber"></label>
+                </div>
+            </div>
+            <div class="field-wrap">
+                <div class="divTitle">
+                    <label id="Label4">Genre: </label>
+                </div>
+                <div class="divText">
+                    <label id="lblGenre"></label>
+                </div>
+            </div>
+            <div class="field-wrap">
+                <div class="divTitle">
+                    <label id="Label5">Publisher: </label>
+                </div>
+                <div class="divText">
+                    <label id="lblPublisher"></label>
+                </div>
+            </div>
+            <div class="field-wrap">
+                <div class="divTitle">
+                    <label id="Label6">Rating: </label>
+                </div>
+                <div class="divText">
+                    <!--<span>&#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span>-->
+                    <span class="stars"></span>
+                </div>
+            </div>
+            <label id="lblHiddenID" style="display: none"></label>
+        </div>
+
+        <button type="submit" class="button button-block" id="btnLoan" onclick="loan()">
+            Loan</button>
+
+        <div style="position: relative">
+            <label id="lblAvailable" class="errorLabel">
+                This title is currently unavailable
+            </label>
+        </div>
+    </div>
+
+    <div class="popup" id="profilePopUp">
+        <a class="close" href="#" onclick="closePopup('profilePopUp')">X</a>
+        <div id="Div3" style="width: 100%; height: 250px;">
+            <div class="field-wrap">
+                <div class="divTitle">
+                    <label id="Label7">Username: </label>
+                </div>
+                <div class="divText">
+                    <label id="lblprofUser"></label>
+                </div>
+            </div>
+            <div class="field-wrap">
+                <div class="divTitle">
+                    <label id="Label9">First Name: </label>
+                </div>
+                <div class="divText">
+                    <label id="lblprofFirst"></label>
+                </div>
+            </div>
+            <div class="field-wrap">
+                <div class="divTitle">
+                    <label id="Label11">Last Name: </label>
+                </div>
+                <div class="divText">
+                    <label id="lblprofLast"></label>
+                </div>
+            </div>
+            <div class="field-wrap">
+                <input type="checkbox" id="profchkAdmin" style="width: 19px; height: 19px; float: left" />
+                <label for="profchkAdmin" style="margin-top: 100px; margin-left: 15px; margin-bottom: 10px">
+                    Is Administrator
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="exitoPopUp">
+        <a class="close" href="#" onclick="closePopup('exitoPopUp')">X</a>
+        <div id="Div5" style="width: 100%; height: 250px;">
+            <h1>Succesful Loan!</h1>
+            <button class="button button-block" id="Button1" onclick="closePopup('exitoPopUp')">
+                Close</button>
+        </div>
+    </div>
+
+    <div class="wrapper row1">
+        <div id="header">
+            <div id="logo">
+                <div id="logo_text">
+                    <h1><a href="#" onclick="populate('','')">Comics-<span class="logo_colour">Heaven</span></a></h1>
+                </div>
+            </div>
+            <a id="log_anchor" href="#" onclick="showPopup('loginPopUp')" class="login_register">Log In | Register</a>
+            <a id="out_anchor" href="#" onclick="showPopup('logoutPopUp')" class="logout">Logout</a>
+            <div id="menubar">
+                <ul id="menu">
+                    <li><a href="#" title="genre">Genres</a>
+                        <ul>
+                            <!-- TODO: cargar dinamico si tengo tiempo -->
+                            <li><a href='#' class="submenu_links sort">Superhero</a></li>
+                            <li><a href='#' class="submenu_links sort">Horror</a></li>
+                            <li><a href='#' class="submenu_links sort">Non-fiction</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" title="edition">Editions</a>
+                        <ul>
+                            <!-- TODO: cargar dinamico si tengo tiempo -->
+                            <li><a href='#' class="submenu_links sort">Standard</a></li>
+                            <li><a href='#' class="submenu_links sort">Collector</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#" title="character">Characters</a>
+                        <ul>
+                            <!-- TODO: cargar dinamico si tengo tiempo -->
+                            <li><a href='#' class="submenu_links sort">Batman</a></li>
+                            <li><a href='#' class="submenu_links sort">X-men</a></li>
+                            <li><a href='#' class="submenu_links sort">Spiderman</a></li>
+                            <li><a href='#' class="submenu_links sort">Spawn</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Administration</a>
+                        <ul>
+                            <!-- TODO: cargar dinamico si tengo tiempo -->
+                            <li><a href='#' class="submenu_links admin" style="display: none">Add comic</a></li>
+                            <li><a href='#' class="submenu_links admin" style="display: none">Modify comic</a></li>
+                            <li><a href='#' class="submenu_links admin" style="display: none">Remove comic</a></li>
+                            <li><a href='#' class="submenu_links" id="_profile" style="display: none" onclick="showProfile();">My Profile</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="container">
+
+        <div class="banner">
+            <ul>
+                <li id="image1"></li>
+                <li id="image2"></li>
+                <li id="image3"></li>
+                <li id="image4"></li>
+            </ul>
+        </div>
+
+
+    </div>
+
+    <div>
+        <div style="float: left; width: 85%">
+            <section id="latest" class="clear">
+            </section>
+        </div>
+
+        <div id='cssmenu' style="float: right; width: 195px">
+            <ul>
+                <li><a href='#'><span>Top Rated</span></a></li>
+                <li><a href='#'><span>Most popular</span></a>
+                </li>
+                <li><a href='#'><span>Recomended</span></a></li>
+                <li><a href='#'><span>Games</span></a></li>
+                <li class='last'><a href='#'><span>Videos</span></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />

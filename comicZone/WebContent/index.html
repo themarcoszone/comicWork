@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>comicZone</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="js/unslider.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/service.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/render.js"></script>
+</head>
+<body>
+<header id="advertisment">
+	<ul>
+        <li id="adv1"></li>
+        <li id="adv2"></li>
+        <li id="adv3"></li>
+    </ul>
+</header>
+<div id="login">
+<span id="loginBtn"> Login</span>
+</div>
+
+<nav id="menu">
+	<ul id="menuItems">
+		<li><a href="#">Administracion</a></li>
+	</ul>
+</nav>
+
+<div id="genreSection">
+</div>
+
+<div align="center" id="containerLogin">
+	<div id="loginPopup">
+		<p>User: 	<input type="text" id="userName"/></p>
+		<p>Pass:	<input type="password" id="pass"></p>
+		<p class="errorLogin">*Usuario o Pass Incorrectos</p>
+		<button id="checkLogin">LOGIN</button>
+		<button id="closeLogin">CLOSE</button>
+	</div>
+	
+</div>
+<div id="profileInfo">
+	<p>Usuario: <input type="text" id="puser" readonly/></p>
+	<p>Nombre: <input type="text" id="puserName" readonly/></p>
+	<p>Direccion: <input type="text" id="puserAddress" readonly/> </p>
+	<p>Telefono: <input type="text" id="puserTel" readonly/></p>
+	<p>Tarjeta de Credito: <input type="text" id="puserCreditCard" readonly/></p>
+</div>
+
+<div id="searchCharacter">
+	<p>Nombre Personaje: <input type="text" id="characterName"/></p>
+	<p>Alter Ego: <input type="text" id="characterAlterEgo"/></p>
+	<p>Genero Personaje: <input type="text" id="characterGenre"/></p>
+	<p>Editorial: <input type="text" id="characterCreator"/></p>
+	<button id="searchCharBtn">Buscar</button>
+	<div id="resultCharacters">	
+	</div>
+</div>
+
+<div id="siteMap">
+	<p class="subtitle">Mapa del Sitio</p>
+	<div id="itemsMap"></div>
+</div>
+
+<footer id="footerSite">
+	<ul>
+        <li id="facebookFooterImg"><a href="https://www.facebook.com/ComicsAlliance" target="_blank"><span class="icon"
+        	title="Seguinos en Facebook"></span></a></li>
+        <li id="twitterFooterImg"><a href="https://twitter.com/comicsalliance" target="_blank"><span class="icon"
+        	title="Seguinos en twiter"></span></a></li>
+        <li id="youtubeFooterImg"><a href="https://www.youtube.com/user/comicsalliance" target="_blank"><span class="icon" 
+        	title="Seguinos en Youtube"></span></a></li>
+    </ul>
+    <div align="center"  class="disclaimer">
+    	<span>&copy; Todos los derechos reservados | Comic Zone | </span>
+    	<span id="siteMapLink">Mapa del Sitio</span>
+    </div>
+
+</footer>
+
+
+</body>
+</html>

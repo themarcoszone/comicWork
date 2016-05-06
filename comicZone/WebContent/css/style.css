@@ -1,0 +1,229 @@
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background-color: #275A21;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#login{
+	text-align: right;
+	display: block;
+	padding-right: 40px;
+	margin-top: 30px;
+}
+
+#login span {
+	font-size: 20px;
+	color: #FFF;
+	background-color: #1C8ECA;
+	font-weight: bold;
+	padding: 20px;	
+}
+
+#loginBtn{
+	cursor:pointer;
+}
+
+
+#advertisment {
+    position: relative;
+    overflow: auto;
+    width: 100%;
+}
+
+    #advertisment ul {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    #advertisment li {
+        list-style: none;
+    }
+
+    #advertisment ul li {
+        float: left;
+        display: block;
+        max-width: 100%;
+        height: 250px;
+        /*		-webkit-background-size: 100% 100%;*/
+        -moz-background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+        -ms-background-size: 100% 100%;
+        /*		background-size: 100% 100%;*/
+    }
+
+#adv1 {
+    background-image: url("../resources/img/header1.jpg");
+}
+
+#adv2 {
+    background-image: url("../resources/img/Superheroes.jpg");
+}
+
+#adv3 {
+    background-image: url("../resources/img/allavengerssdccposter1.jpg");
+}
+
+
+#facebookFooterImg a .icon{
+		background-image: url("../resources/img/social_sprite.png");
+		background-position: -70px -150px;
+		background-repeat: no-repeat;
+		height: 30px;
+		width: 30px;
+		display:inline-block;
+}
+
+#twitterFooterImg a .icon{
+		background-image: url("../resources/img/social_sprite.png");
+		background-position: 0px -216px;
+		background-repeat: no-repeat;
+		height: 30px;
+		width: 30px;
+		display:inline-block;
+}
+
+#youtubeFooterImg a .icon{
+		background-image: url("../resources/img/social_sprite.png");
+		background-position: 0px -248px;
+		background-repeat: no-repeat;
+		height: 30px;
+		width: 30px;
+		display:inline-block;
+}
+
+#footerSite ul {
+	width: 100%;
+	height: 30px;
+	text-align: center
+}
+#footerSite ul li{
+	list-style-type: none;
+	display: inline;
+
+}
+
+#menu {
+	text-align: center;
+}
+#menu ul{
+	display: inline;
+	background-color: black;
+	padding: 10px;
+	
+}
+
+#menu ul li{
+	width: auto;
+	display: inline;	
+	cursor: pointer;
+	padding: 40px;
+	
+}
+
+#menu ul li a {
+	font-weight: bold;
+	text-decoration: none;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+#loginPopup{
+	background-color: #BC6E3E;
+	height: 200px;
+	width: 300px;
+	text-align: center;
+	padding-top: 10px;
+	display:none;
+}
+
+#loginPopup input {
+	height: 25px;
+	width: 200px;
+}
+#loginPopup p, .subtitle{
+	color: white;
+	font-size: 26px
+}
+
+.disclaimer{
+	color: white;
+	font-size: 12px;
+}
+
+#containerLogin .errorLogin{
+	color: #B4190D;
+	display: none;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0px;
+}
+
+#profileInfo{
+	display: none;
+	margin-left: 350px;
+	margin-top: 60px;
+}
+
+#profileInfo p{
+	color: white;
+	font-weight: bold;
+}
+
+#genreSection{
+	display: none;
+}
+
+#genreSection img,  #resultCharacters img{
+	max-width: 200px;
+}
+
+#genreSection div{
+	margin-left: 100px;
+}
+
+#genreSection div p{
+	color: white;
+}
+.genreTitle{
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.comicDiv {
+	display: inline-block;
+}
+
+#searchCharacter{
+	display: none;
+	padding: 40px 250px;
+}
+
+#searchCharacter p{
+	color: white;
+	font-weight: bold;
+}
+
+#resultCharacters{
+	padding-top: 30px;
+}
+#siteMapLink{
+	cursor: pointer;
+}
+
+#siteMap{
+	display: none;
+	padding: 60px 400px;
+}
+
+#siteMap p{
+	color: white;
+}
+
+.link{
+	cursor: pointer;
+}
